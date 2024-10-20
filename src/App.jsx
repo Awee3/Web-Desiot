@@ -1,33 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Logo from './assets/elevator-logo.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="bg-[#161618] h-screen overflow-clip p-6">
+      <div className="w-full h-fit bg-[#363639] text-center rounded-[10px] place-items-center flex justify-center">
+        <img src={Logo} className="w-[35px] h-[35px]" alt="" />
+        <h1 className="font-bold text-white p-3 text-base">Elevator's Dashboard</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="grid w-full min-h-[682px] mt-4">
+        <div className="flex justify-between w-full">
+          <div className="w-[530px] h-[380px] rounded-[20px] bg-[#363639] text-center">
+            <p className='text-white mt-2 font-extralight'>Real Time Weight</p>
+          </div>
+
+          <div className="w-[530px] h-[380px] rounded-[20px] bg-[#363639] text-center">
+            <p className='text-white mt-2 font-extralight'>Status of Elevator</p>
+          </div>
+
+          <div className="w-[530px] h-[380px] rounded-[20px] bg-[#363639] text-center">
+            <p className='text-white mt-2 font-extralight'>Recommended Maintenance</p>
+          </div>
+        </div>
+
+        <div className="w-full h-[360px] rounded-[20px] bg-[#363639] mt-6 text-center">
+          <p className='text-white mt-2 font-extralight'>Graph</p>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </main>
     </>
   )
 }
